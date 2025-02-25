@@ -1,3 +1,5 @@
+#old version of data load - use create_sample_data.rb instead
+
 Place.destroy_all
 
 # Create Place
