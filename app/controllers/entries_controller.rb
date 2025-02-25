@@ -6,19 +6,19 @@ class EntriesController < ApplicationController
   end
 
   def create
-    # start with a new Contact
+    # start with a new entry
     @entry = Entry.new
 
-    # assign user-entered form data to Contact's columns
+    # assign user-entered form data to entry's columns
     @entry["title"] = params["title"]
     @entry["description"] = params["description"]
     @entry["occurred_on"] = params["occurred_on"]
     
 
-    # assign relationship between Contact and Company
+    # assign relationship between entry and place
     @entry["place_id"] = params["place_id"]
 
-    # save Contact row
+    # save entry row
     @entry.save
 
     # redirect user
